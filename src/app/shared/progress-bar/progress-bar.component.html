@@ -1,0 +1,5 @@
+<!-- <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar> -->
+<ng-container *ngIf="progress > 0 && progress < 100">
+    <ngb-progressbar class="mb-3" type="info" [value]="progress" [striped]="true" 
+    [animated]="true" [height]="height"></ngb-progressbar>
+</ng-container>

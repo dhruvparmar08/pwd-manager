@@ -1,0 +1,52 @@
+<div class="row m-2">
+    <div class="col-7">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="search" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                    <mat-icon aria-hidden="false" aria-label="Example search icon" fontIcon="search"></mat-icon>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-5" style="text-align: end;">
+        <button class="btn btn-primary" routerLink="/main/dashboard/add">
+            <mat-icon aria-hidden="false" class="align-middle" aria-label="Example add icon"
+                    fontIcon="add"></mat-icon>
+        </button>
+    </div>
+</div>
+
+<div class="row m-1 mb-3">
+    <div class="col-12" style="height: 300px; overflow-y: auto;">
+        <div class="">
+            <ng-container *ngIf="vaultData.length > 0; else nodata">
+            <div class="card mb-3"  *ngFor="let dat of vaultData">
+                <div class="row g-0">
+                  <div class="col-sm-12">
+                    <div class="card-body d-flex">
+                        <div class="col-sm-8">
+                            <p class="card-text">{{dat.application_name}} </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="card-text actions">
+                                <mat-icon aria-hidden="false" routerLink="/main/dashboard/edit/{{dat.id}}" class="align-middle edit_icon" aria-label="Example edit icon"
+                                        fontIcon="edit"></mat-icon>
+                            </p>
+                        </div>
+                      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #nodata>
+                <div class="card-body">
+                    <p class="card-text">No record found</p>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

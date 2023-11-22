@@ -1,0 +1,29 @@
+<div class="row">
+    <nav class="navbar bg-body-tertiary">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/main">
+                    <h5>Etech AI</h5>
+                    <!-- <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Etech AI" width="30" height="24"> -->
+                </a>
+            </li>
+            <li class="nav-item">
+                <a title="Valut Dashboard" class="nav-link" routerLink="/main/dashboard" routerLinkActive="active">
+                    <mat-icon aria-hidden="false" aria-label="Example lock_person icon"
+                        fontIcon="lock_person"></mat-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a title="Setting" class="nav-link" routerLink="/main/settings" routerLinkActive="active">
+                    <mat-icon aria-hidden="false" aria-label="Example manage_accounts icon"
+                        fontIcon="manage_accounts"></mat-icon>
+                </a>
+            </li>
+          </ul>
+    </nav>
+</div>
+
+<app-progress-bar></app-progress-bar>
+<main>
+    <router-outlet></router-outlet>
+</main>
